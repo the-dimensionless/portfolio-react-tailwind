@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { CodeIcon } from "@heroicons/react/solid";
 import data from "../data";
 
 function Projects() {
-  const [projects, setProjects] = useState(data);
-
   return (
     <section id="projects" className="text-gray-400 bg-gray-900 body-font">
       <div className="container px-5 py-10 mx-auto text-center lg:px-40">
@@ -18,12 +16,8 @@ function Projects() {
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          {projects.map((project, index) => (
-            <a
-              href={project.link}
-              key={index}
-              className="sm:w-1/2 w-100 p-4"
-            >
+          {data.map((project, index) => (
+            <a href={project.link} key={index} className="sm:w-1/2 w-100 p-4">
               <div className="flex relative">
                 <img
                   alt="gallery"
